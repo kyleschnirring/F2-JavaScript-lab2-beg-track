@@ -188,9 +188,9 @@ function max(array) {
 
 // TODO: write three more assertions
 assert(max([ 1, 3, 2 ]) === 3, '[1,3,2]');
-assert(max([ 10, 59, 45]) === 59, '[10,59,45]');
-assert(max([100, 2, 73]) === 100, '[100,2,73]');
-assert(max([99, 10000, 560]) === 10000, '[99,10000,560]');
+assert(max([ 10, 59, 45 ]) === 59, '[10,59,45]');
+assert(max([ 100, 2, 73 ]) === 100, '[100,2,73]');
+assert(max([ 99, 10000, 560 ]) === 10000, '[99,10000,560]');
 
 function variablify(string) {
   // TODO: you are given a string with several words in it
@@ -213,9 +213,9 @@ function variablify(string) {
 // TODO: write three more assertions
 assert(variablify('one two three') === 'oneTwoThree',
   'variablify(\'one two three\')');
-assert(variablify('code fellow is awesome') === 'codeFellowsIsAwesome');
-assert(variablify('i love pizza') === 'iLovePizza');
-assert(variablify('dogs rule') === 'dogsRule');
+assert(variablify('code fellows is awesome') === 'codeFellowsIsAwesome', 'me');
+assert(variablify('i love pizza') === 'iLovePizza', 'you');
+assert(variablify('dogs rule') === 'dogsRule', 'this one');
 
 //*********************************************************
 // PROBLEM 4: Cleanup: 10 points
