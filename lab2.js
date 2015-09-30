@@ -78,14 +78,14 @@ function hoursToOoze(population, peoplePerHour) {
   // TODO: implement me based on the instructions above.
   // Be sure to then assign me to the Blob's prototype.
   var hours = 1;
-  this.population = population;
-  this.peoplePerHour = peoplePerHour;
+  var myPopulation = population;
+  var myPeoplePerHour = peoplePerHour;
 
   if (population === 0) {
     return 0;
   }
-  for (peoplePerHour; peoplePerHour < population; hours++) {
-    peoplePerHour *= hours;
+  for (myPeoplePerHour; peoplePerHour < myPopulation; hours++) {
+    myPeoplePerHour *= hours;
   }
   return hours;
 }
@@ -102,7 +102,7 @@ Blob.prototype.hoursToOoze = function (population, peoplePerHour) {
     peoplePerHour *= hours;
   }
   return hours;
-}
+};
 
 assert(blob.hoursToOoze(0, 1) === 0, 'no people means no time needed.');
 assert(blob.hoursToOoze(1000, 1) === hoursSpentInDowington,
@@ -129,7 +129,7 @@ var hello = {
 // speak, and method (that you'll place on the prototype) called
 // sayHello.
 
-function SentientBeing (homePlanet, beingslanguage) {
+function SentientBeing(homePlanet, beingslanguage) {
   // TODO: specify a home planet and a language
   // you'll need to add parameters to this constructor
   this.homePlanet = homePlanet;
@@ -137,7 +137,7 @@ function SentientBeing (homePlanet, beingslanguage) {
 }
 
 // sb is a SentientBeing object
-function sayHello (sb) {
+function sayHello(sb) {
     // TODO: say hello prints out (console.log's) hello in the
     // language of the speaker, but returns it in the language
     // of the listener (the sb parameter above).
@@ -145,14 +145,14 @@ function sayHello (sb) {
     // to do the translating
 
     //TODO: put this on the SentientBeing prototype
-    console.log(hello[this.beingslanguage]);
-    return hello[sb.beingslanguage];
-  }
 
-SentientBeing.prototype.sayHello = function(sb){
-  console.log(hello[this.beingslanguage]);
-    return hello[sb.beingslanguage];
+  return hello[sb.beingslanguage];
 }
+
+SentientBeing.prototype.sayHello = function (sb) {
+  console.log(hello[this.beingslanguage]);
+  return hello[sb.beingslanguage];
+};
 
 // TODO: create three SentientBeings, one for each language in the
 // 'hello' object above.
